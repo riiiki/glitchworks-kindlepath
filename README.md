@@ -1,4 +1,4 @@
-# Lantern Keeper — Godot 4.7.2
+# Kindlepath — Glitchworks
 
 A 2D top-down puzzle-adventure prototype for PC and Android. The project draws its geometric art in GDScript and generates simple original ambient audio and sound effects in code, so it has no external asset dependencies.
 
@@ -6,7 +6,7 @@ A 2D top-down puzzle-adventure prototype for PC and Android. The project draws i
 1. Install Godot 4.7.2 (or another Godot 4.7.x stable release).
 2. Extract this ZIP file.
 3. Open Godot Project Manager → Import.
-4. Select `project.godot` inside the extracted `LanternKeeper_Godot` folder.
+4. Select `project.godot` inside the extracted `glitchworks-kindlepath` folder.
 5. Open the project and press F6 or F5.
 
 ## Controls
