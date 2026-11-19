@@ -1,87 +1,127 @@
-# Lantern Keeper — Godot 4.7.2
+# LANTERN KEEPER
+### 2D Top-Down Puzzle-Adventure | Godot 4.7.2
 
-A 2D top-down puzzle-adventure prototype for PC and Android. The project draws its geometric art in GDScript and generates simple original ambient audio and sound effects in code, so it has no external asset dependencies.
+## Project Overview
 
-## Open and run
-1. Install Godot 4.7.2 (or another Godot 4.7.x stable release).
-2. Extract this ZIP file.
-3. Open Godot Project Manager → Import.
-4. Select `project.godot` inside the extracted `LanternKeeper_Godot` folder.
-5. Open the project and press F6 or F5.
+**Lantern Keeper** is a 2D top-down puzzle-adventure game developed with the Godot Engine. The player takes the role of the last Lantern Keeper, a traveler tasked with restoring light to a world that is slowly being consumed by darkness.
+
+Across three regions, the player explores the environment, collects scattered light motes, solves simple environmental puzzles, avoids shadow creatures, and activates ancient beacons. Each region introduces a different layout and challenge, with difficulty increasing as the player progresses.
+
+## Project Objectives
+
+- Develop a playable 2D adventure game using Godot and GDScript.
+- Demonstrate player movement, collision handling, interaction, and game-state management.
+- Apply level progression through collectibles, switches, gates, checkpoints, and beacons.
+- Provide keyboard controls for PC and touch controls for Android.
+- Create a consistent visual style using procedural, code-drawn 2D art.
+
+## Story and Gameplay
+
+The world's ancient beacons have gone dark. As their light disappears, paths and memories begin to fade. The player must travel through three regions, recover their lost light motes, overcome each region's obstacles, and restore its beacon.
+
+**Main gameplay sequence:**
+
+1. Explore the current region.
+2. Collect the required light motes.
+3. Avoid shadow enemies and environmental hazards.
+4. Activate switches or solve the region's puzzle to open the way forward.
+5. Reach and activate the beacon to complete the region.
+6. Continue to the next region until the final encounter is completed.
+
+## Regions
+
+| Region | Environment | Main challenge |
+|---|---|---|
+| The Quiet Grove | Forest paths, foliage, and ruins | Learn the controls and use a movable crate with a pressure plate to open the gate. |
+| The Sunken Archive | Submerged ruins and stone pathways | Activate two seals while navigating a moving obstacle and shadow enemies. |
+| The Last Summit | Mountain ruins under a violet twilight sky | Activate two seals, then face the Summit Guardian before reaching the final beacon. |
+
+## Main Features
+
+- **Three playable regions** with distinct environments, palettes, and increasing challenge.
+- **Exploration and collection:** gather light motes and discover optional hidden memories.
+- **Environmental puzzles:** interact with switches, seals, gates, pressure plates, and movable objects.
+- **Enemy encounters:** Wisps patrol the area, Stalkers periodically pursue the player, and Guardians defend smaller territories.
+- **Final encounter:** the Summit Guardian uses a warning-and-recovery pattern. The player must avoid its warning pulse and interact during its recovery window.
+- **Player status:** three lantern lives, lantern energy, temporary protection, and collectible power-ups.
+- **Checkpoints and progression:** checkpoints support region progress, while completed regions unlock further stages.
+- **Menus and game flow:** opening story, tutorial, level selection, settings, pause, game-over, region-complete, victory, and credits screens.
+- **Audio:** generated sound effects and region-specific ambient tones, with volume and audio options.
+- **Local save data:** stores unlocked progress, best results, and player settings.
+- **Cross-platform input:** keyboard and mouse on PC, plus on-screen touch controls for Android.
 
 ## Controls
-- PC: WASD or arrow keys to move; E or Space to activate a beacon; Esc to pause/resume.
-- Android: use the lower-left virtual joystick to move and the lower-right ACT control to interact. The joystick and ACT button support separate simultaneous touch points.
-- Mouse: click the on-screen buttons and ACT area.
 
-## Features
-- Three regions with collectibles, walls, moving shadow hazards, and beacons.
-- Three lantern lives and a short post-hit invulnerability period.
-- Procedurally generated collection, damage, beacon, and UI sounds.
-- Distinct looping ambient tones for each region.
-- Independent sound-effects and music toggles, plus master-volume controls.
-- Settings menu with fullscreen toggle.
-- Level selection; regions unlock as the player completes the previous region.
-- Pause menu with Resume, Restart Region, and Main Menu.
-- Game-over and victory screens with elapsed time and score.
-- Persistent unlocked progress, best completion time, best score, volume, and audio preferences (`user://lantern_keeper_save.cfg`).
-- Canvas-item stretching with aspect preservation for more consistent display scaling.
+| Action | PC | Android |
+|---|---|---|
+| Move | W, A, S, D or Arrow Keys | Use the virtual joystick at the lower-left of the screen. |
+| Interact | E or Space | Tap the ACT button. |
+| Pause / Resume | Esc | Use the on-screen Pause button. |
 
-## Save data
-Progress and settings are stored locally in Godot's `user://` directory. Removing the app's user data resets progress. No online account or network connection is used.
+Use the interaction control near a switch, seal, beacon, or other interactive object. Some objectives only become available after the required collectibles or puzzle steps have been completed.
 
-## Project structure
-- `project.godot` — Godot project configuration and input actions
-- `scenes/Main.tscn` — main scene
-- `scripts/game.gd` — game logic, menus, generated audio, touch input, drawing, and save system
-- `LANTERN_KEEPER_GDD.md` — game design document
-- `TEST_CHECKLIST.md` — manual validation checklist
+## Getting Started
 
-## Export
-For PC: Project → Export → add a Windows Desktop preset.
-For Android: install the Android build templates and configure the Android SDK/JDK in Editor Settings, then add an Android preset. This source project uses the GL Compatibility renderer. An APK has not been exported as part of this archive.
+### Requirements
 
-## Important validation note
-The source has been updated for Godot 4.7.2, but this environment did not have a Godot executable or an Android device available. Please run the included `TEST_CHECKLIST.md` in Godot 4.7.2 and on the target Android device before treating the project as fully tested.
+- Godot Engine **4.7.2** (or a compatible Godot 4.7.x release).
+- A Windows, macOS, or Linux computer for editor-based development.
+- For Android deployment: Android export templates and a configured Android SDK/JDK.
 
+### Open the project
 
-## Gameplay improvements in this build
-- Lantern energy drains gradually; collecting motes restores energy.
-- A checkpoint is activated as the player approaches the beacon area.
-- Shadow enemies patrol, and some periodically pursue the player.
-- Each region has a switch and sealed gate; interact near the switch to open it.
-- Pushable crates, temporary speed boosts, and temporary protective shields are included.
-- Level completion awards up to three stars based on remaining lives, energy, and time.
+1. Download and extract the project ZIP.
+2. Open **Godot Project Manager**.
+3. Select **Import**.
+4. Browse to the extracted `LanternKeeper_Godot` folder and select `project.godot`.
+5. Open the imported project.
+6. Press **F6** to run the current scene or **F5** to run the project from its main scene.
 
-Controls: move with WASD/arrow keys or the Android virtual stick. Press E/Space or tap ACT to activate a nearby switch or beacon. Push crates by walking into them.
+## Project Structure
 
+```text
+LanternKeeper_Godot/
+├── project.godot                 # Project settings and input configuration
+├── README.md                     # Project overview and setup instructions
+├── LANTERN_KEEPER_GDD.md         # Game design document
+├── TEST_CHECKLIST.md             # Manual testing checklist
+├── scenes/
+│   └── Main.tscn                 # Main game scene
+└── scripts/
+    ├── game.gd                   # Game logic, UI, input, audio, and save handling
+    ├── character_art.gd          # Player character drawing and animation
+    └── environment_art.gd        # Region environment drawing
+```
 
-## Visual and code-structure update
+Most gameplay systems are coordinated by `scripts/game.gd`. Character and environment rendering are separated into their own scripts to make visual changes easier to manage.
 
-This build adds procedural environment art for each region (winding paths, tree clusters, rocks, grass, flowers, and broken ruins), a procedural character idle/walk/damage presentation, glowing mote pulses, and particle bursts for collection, damage, switches, and beacon activation. The HUD now includes a clearer energy bar and region/mote progress.
+## Save Data and Privacy
 
-Reusable rendering code is separated into:
-- `scripts/environment_art.gd` — region environment rendering.
-- `scripts/character_art.gd` — player character animation and drawing.
-- `scripts/game.gd` — game flow, gameplay state, input, and HUD integration.
+The game stores progress and settings locally through Godot's `user://` data directory, using the file `lantern_keeper_save.cfg`. The project does not require an online account or network connection for its core gameplay. Removing the game's local user data resets saved progress and preferences.
 
-The gameplay controller still owns several systems in `game.gd`; this is a first refactoring step, not a complete component-based rewrite.
+## Testing and Known Limitations
 
+The project includes `TEST_CHECKLIST.md`, which should be used to verify navigation, controls, collisions, puzzle progression, enemy behavior, saving, and the three-region game flow.
 
-## Latest UI and difficulty update
-- Added a dedicated How to Play tutorial page accessible from the main menu.
-- Reworked the Settings page with a centered panel and wider, more readable controls.
-- Increased shadow-wisp counts across all three regions and increased pursuit speed in later regions.
-- Added clearer layered enemy silhouettes and glow effects.
+**Testing status:** the source project has been updated for Godot 4.7.2, but it has not been runtime-verified in the Godot editor or tested on a physical Android device in the environment where this archive was prepared. Please run the checklist before presenting a final executable build. In particular, verify gate and obstacle collisions, touch input, checkpoint behavior, enemy interactions, and the final guardian encounter.
 
-Runtime note: this update has not yet been launched in the Godot editor; test the tutorial navigation, settings controls, and enemy collisions before exporting.
+The ZIP contains the editable Godot project source. It does **not** include a pre-exported Windows executable or Android APK.
 
+## Exporting the Game
 
-## Final gameplay polish
-- Increased the player character's drawn size and added a stronger layered silhouette, hood/face detail, cloak folds, animated boots, and a lantern glow.
-- Added three distinct enemy presentations and behaviors: drifting Wisps, periodically pursuing Stalkers, and territory-patrolling Guardians. Later regions increase pursuit pressure.
-- Added a final Summit Guardian encounter: after collecting all motes and opening the gate, approach the guardian and press E/Space/ACT three times to calm it before using the beacon. The guardian can still damage the player on contact.
-- Changed zero-energy handling so it applies one damage penalty per depletion event instead of repeatedly hitting the player every invulnerability cycle.
-- Expanded the tutorial and manual checklist for the new enemy types and final encounter.
+- **Windows:** In Godot, open **Project → Export**, add a **Windows Desktop** preset, install the matching export templates if prompted, and export the project.
+- **Android:** Install the matching export templates, configure the Android SDK/JDK in Godot's Editor Settings, add an **Android** preset, and export an APK or AAB as required.
 
-This is a source-level implementation. The project still requires Godot 4.7.2 runtime testing, plus Windows and Android device testing.
+Always test exported builds on their intended platforms before distribution or evaluation.
+
+## Included Documentation
+
+- `LANTERN_KEEPER_GDD.md` — concept, story, design goals, gameplay systems, and region descriptions.
+- `TEST_CHECKLIST.md` — suggested manual test cases and validation steps.
+
+---
+
+**Project:** Lantern Keeper  
+**Engine:** Godot 4.7.2  
+**Genre:** 2D Top-Down Puzzle-Adventure  
+**Platforms:** PC and Android (source configured; exported builds require platform setup)
