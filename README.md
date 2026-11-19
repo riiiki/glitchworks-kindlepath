@@ -1,5 +1,6 @@
 # LANTERN KEEPER
 ### 2D Top-Down Puzzle-Adventure | Godot 4.7.2
+# Kindlepath — Glitchworks
 
 ## Project Overview
 
@@ -49,6 +50,12 @@ The world's ancient beacons have gone dark. As their light disappears, paths and
 - **Audio:** generated sound effects and region-specific ambient tones, with volume and audio options.
 - **Local save data:** stores unlocked progress, best results, and player settings.
 - **Cross-platform input:** keyboard and mouse on PC, plus on-screen touch controls for Android.
+## Open and run
+1. Install Godot 4.7.2 (or another Godot 4.7.x stable release).
+2. Extract this ZIP file.
+3. Open Godot Project Manager → Import.
+4. Select `project.godot` inside the extracted `glitchworks-kindlepath` folder.
+5. Open the project and press F6 or F5.
 
 ## Controls
 
