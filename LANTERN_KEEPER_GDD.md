@@ -103,3 +103,12 @@ Shadow encounters use three enemy identities:
 In The Last Summit, collecting all light motes and activating the region switch awakens the Summit Guardian. The player must approach it and interact three times (E, Space, or ACT) to calm it, while avoiding contact damage. The final beacon can then be activated.
 
 The player character is drawn larger with a stronger cloak silhouette, hood/face details, animated boots, and a lantern glow. Lantern energy depletion now applies a single damage penalty per depletion event rather than repeatedly damaging the player until energy is restored.
+
+
+## Region-specific puzzle and encounter update
+
+- **The Quiet Grove:** A movable crate can be pushed onto the pressure plate to open the gate. A deliberate checkpoint and a hidden bonus memory reward exploration.
+- **The Sunken Archive:** Two seals must be activated. A moving stone obstacle patrols the lower route, and a hidden bonus memory rewards exploration.
+- **The Last Summit:** Two seals unlock the guardian arena. The Summit Guardian telegraphs a radial light pulse; the player must move out of its warning radius, then approach and press ACT during its recovery window to remove one of its three seals. The final beacon unlocks after the guardian is calmed.
+
+The opening story, region-complete transitions, and credits screen complete the game's narrative flow.

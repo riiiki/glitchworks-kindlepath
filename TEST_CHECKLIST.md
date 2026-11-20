@@ -82,3 +82,28 @@ The project source is prepared for Godot 4.7.2, but no Godot executable/device r
 - [ ] The guardian can damage the player on contact; shields and invulnerability still work.
 - [ ] The final beacon remains locked until the guardian is calmed.
 - [ ] Tutorial explains the enemy types and final guardian encounter.
+
+
+## Applied critical-fix and region tests
+- [ ] Closed gates block the player from every approach direction; opening all required seals removes the collision.
+- [ ] Crate pushing is blocked by walls, closed gates, and the moving obstacle.
+- [ ] Grove pressure plate opens its gate when the crate is pushed onto it and ACT is pressed.
+- [ ] Archive and Summit gates remain closed until both seals are activated.
+- [ ] Checkpoint activates only when the player reaches the visible checkpoint marker; damage respawns at that marker.
+- [ ] Tutorial's final instruction does not overlap Back to Menu at 1280x720.
+- [ ] Archive moving obstacle moves along its route and blocks player movement without passing through the wall layout.
+- [ ] Hidden memory bonus can be collected once per region and awards 300 points.
+- [ ] Stalkers chase and then retreat; Guardians remain near their patrol territory.
+- [ ] Summit Guardian shows a warning radius before its pulse, damages only within the pulse radius, and becomes vulnerable during recovery.
+- [ ] Press ACT near the vulnerable Guardian during recovery to remove one seal; repeat for all three seals.
+- [ ] Final beacon remains locked until the Guardian is calmed.
+- [ ] Main menu opens the story, tutorial, settings, and credits screens.
+- [ ] Story Continue starts Region 1; credits Back returns to the menu.
+- [ ] Region-complete screen leads to the next region; final victory screen can open credits.
+
+## Export and presentation checklist
+- [ ] Add a Windows Desktop export preset in Godot 4.7.2 and install export templates.
+- [ ] Export and launch the Windows build.
+- [ ] If required, configure Android SDK/JDK, add an Android export preset, export an APK, and test on a physical device.
+- [ ] Capture title screen, each region, tutorial, guardian encounter, victory, and credits screenshots.
+- [ ] Record a short full-playthrough or feature demonstration after runtime testing.
